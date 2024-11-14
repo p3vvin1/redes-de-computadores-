@@ -3,7 +3,7 @@ from threading import Thread
 from time import sleep
 from datetime import datetime
 
-# Função para enviar mensagens ao servidor
+# Função que envia mensagens para o servidor
 def enviar_mensagens(s):
     while True:
         try:
@@ -17,7 +17,7 @@ def enviar_mensagens(s):
             s.close()
             break
 
-# Função para escutar mensagens do servidor
+# Função que escuta as mensagens do servidor
 def escutar_mensagens(s):
     while True:
         try:
@@ -37,4 +37,4 @@ print('Conectado ao servidor na porta 8000')
 
 # Iniciar threads para enviar e escutar mensagens
 Thread(target=enviar_mensagens, args=(s,)).start()
-Thread(target=escutar_mensagens, args=(s,)).start()
+Thread(target=escutar_mensagens, args=(s,)).start() 

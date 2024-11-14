@@ -1,7 +1,7 @@
 from socket import socket, AF_INET, SOCK_STREAM
 from threading import Thread
 
-# Função para escutar mensagens do cliente
+# Função que escuta as mensagens do cliente
 def escutar_cliente(cliente_socket, endereco_cliente):
     while True:
         try:
@@ -14,7 +14,7 @@ def escutar_cliente(cliente_socket, endereco_cliente):
             print(f'Cliente {endereco_cliente} desconectado abruptamente.')
             break
 
-# Função para enviar mensagens personalizadas para o cliente
+# Função que envia mensagens personalizadas para o cliente
 def enviar_para_cliente(cliente_socket):
     while True:
         mensagem = input("Digite sua mensagem para o cliente: ")
